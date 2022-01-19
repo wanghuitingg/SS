@@ -1,0 +1,45 @@
+.banner{
+    height: 120px;
+    /* background: red; */
+    background-image: url(../images/1.jpg);
+    /* 背景图片定位 水平0（固定值 left center right）  垂直0(固定值 top center bottom ) */
+    background-position: center 0;
+    /* 背景图片大小  宽度自适应 高度120*/
+    background-size:auto 120px ;
+}
+/* nav开始 */
+.nav{
+    height: 40px;
+    background: #333;
+}
+.wrapper{
+    width: 1226px;
+    height: 40px;
+    /* background: #f00; */
+    margin: 0 auto;
+}
+.nav-left{
+    float: left;
+}
+.nav-left li,.nav-right li{
+    float: left;
+    line-height: 40px;
+}
+/* 群组选择器 */
+.nav-left li a,.nav-right li a{
+    color: #b0b0b0;
+    font-size: 12px;
+    padding: 0 7px;
+}
+.nav-right{
+    float: right;
+}
+/* .nav-right li{
+    float: left;
+    line-height: 40px;
+} */
+/* .nav-right li a{
+    color:  #b0b0b0;
+    font-size: 12px;
+    padding: 0 7px;
+} */

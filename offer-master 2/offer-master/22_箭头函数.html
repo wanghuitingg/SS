@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>111111</li>
+        <li>222222</li>
+        <li>3333</li>
+    </ul>
+    <script>
+        // let a = () => {
+
+        // }
+        // 箭头函数this指向父作用域的this (声明时的this) 普通函数中的this指向 调用时的this
+        // var aLi = document.getElementsByTagName('li');
+        // for(var i=0; i<aLi.length;i++){
+        //     aLi[i].onclick = function(){
+        //         // setTimeout(() => {
+        //         //     console.log(this);
+        //         // },1000);
+        //         setTimeout(function(){
+        //             console.log(this);
+        //         }.bind(this),1000);
+        //     }
+        // }
+
+
+        // var obj = {
+        //     name:'zs',
+        //     say:() => {
+        //         setTimeout(() =>{
+        //             console.log(this);
+        //         },1000);
+        //     }
+        // }
+        // obj.say();
+        // function a(x,y,z){
+        //     console.log(x,y,z);
+        //     console.log(arguments.callee);
+        //     // 数组 参数
+        //     console.log(arguments); 
+        // }
+
+        let a = (...rest) => {
+            // console.log(x,y,z);
+            // console.log(arguments);
+            console.log(x,rest);
+        }
+        a(1,2,3);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+
+</body>
+</html>

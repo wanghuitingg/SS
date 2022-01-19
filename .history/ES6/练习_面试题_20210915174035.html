@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //习题一  var str1 = 123000  //321
+        // let str1 = 123000;
+        // console.log(Number.parseInt(str1.toString().split("").reverse().join("")));
+
+
+        //习题二   //闭包：内部函数调用外部函数的局部变量
+        // console.log(sum(2, 3)); //5
+        // console.log(sum(2)(3)); //5
+        function sum(){
+            var a = arguments[0];
+            if(arguments.length == 2){
+                return a+arguments[1]
+            }else{
+                return function(){
+                    return a+arguments[0];
+                }
+            }
+
+        }
+        console.log(sum(2,3));
+        console.log(sum(2)(4));
+
+    </script>
+</body>
+
+</html>

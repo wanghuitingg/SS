@@ -1,0 +1,49 @@
+/* sass1 */
+body {
+  background: #87b2f3;
+}
+
+body .div1 {
+  width: 100px;
+  height: 100px;
+  background: #d85c5c;
+  border-top: 10px solid #166316;
+  border-left: 10px solid #166316;
+}
+
+body p {
+  width: 200px;
+  height: 200px;
+  background: url(success.jpg);
+}
+
+body a {
+  color: gold;
+}
+
+body a:hover {
+  color: green;
+}
+
+body .aa, body .div2 {
+  width: 100px;
+  height: 200px;
+  border: 10px solid hotpink;
+}
+
+body .bb {
+  width: 200px;
+  height: 100px;
+  border: 10px solid #7556e4;
+}
+
+body .div2 {
+  background: #8cd38c;
+}
+
+#arrow {
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #b0e6b0;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //成功  resolve（then）
+        // new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         console.log("1");
+        //         resolve();
+        //     }, 1000)
+        // }).then(function () {
+        //     setTimeout(function () {
+        //         console.log("2");
+        //     }, 1000)
+        // })
+
+        // //失败  reject（catch）
+        // new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         console.log("1");
+        //         reject();
+        //     }, 1000)
+        // }).then(function () {
+        //     setTimeout(function () {
+        //         console.log("2");
+        //     }, 1000)
+        // }).catch(function () {
+        //     console.log("erro");
+        // })
+
+        // //多层
+        // new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         console.log("1");
+        //         resolve();
+        //     }, 1000)
+        // }).then(function () {
+        //     return new Promise(function (resolve, reject) {
+        //         setTimeout(function () {
+        //             console.log("2");
+        //             resolve();
+        //         }, 1000)
+        //     })
+        // }).then(function(){
+        //     setTimeout(function(){
+        //         console.log("3");
+        //     },1000)
+        // })
+
+        //封装简化
+        function proFun(val){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log(val);
+                    resolve();
+                },1000)
+            })
+        }
+        proFun(1).then(function(){
+            return proFun(2);
+        }).then(function(){
+            return proFun(3);
+        }).then(function(){
+            return proFun(4);
+        })
+    </script>
+</body>
+
+</html>

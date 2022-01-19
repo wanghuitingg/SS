@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+    }
+
+    #small-box {
+        position: relative;
+    }
+
+    #small-box img {
+        width: 400px;
+        height: 400px;
+    }
+
+    #drag {
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #big-box{
+        float: left;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="small-box">
+            <img src="images2/1.jpg" alt="">
+            <span id="drag"></span>
+        </div>
+        <div id="big-box">
+            <img src="images2/2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var oDiv = document.getElementById("drag");
+
+        oDiv.onmousedown = function (e) {
+            console.log(oDiv.offsetLeft);
+            console.log(oDiv.offsetTop);
+
+            var disX = e.clientX - oDiv.offsetLeft;
+            var disY = e.clientY - oDiv.offsetTop;
+
+            oDiv.onmousemove = function (e) {
+                console.log(e.clientX, e.clientY);
+                oDiv.style.left = e.clientX - disX + "px";
+                oDiv.style.top = e.clientY - disY + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>

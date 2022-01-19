@@ -1,0 +1,48 @@
+<template>
+    <div>
+        <el-table
+      :data="messageData"
+      style="width: 100%">
+      <el-table-column
+        type="index">
+      <el-table-column
+        prop="date"
+        label="姓名">
+      </el-table-column>
+      <el-table-column
+        prop="name"
+        label="地址">
+      </el-table-column>
+      <el-table-column
+        prop="name"
+        label="等级">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="手机号">
+      </el-table-column>
+       <el-table-column
+      fixed="right"
+      label="操作">
+      <template slot-scope="scope">
+        <el-button
+          @click.native.prevent="deleteRow(scope.$index, tableData)"
+          type="text"
+          size="small">
+          移除
+        </el-button>
+      </template>
+    </el-table-column>
+    </el-table>
+    </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      messageData() {},
+    };
+  },
+};
+</script>

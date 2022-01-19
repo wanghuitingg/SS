@@ -1,0 +1,47 @@
+.nav{
+    background: #333;
+    height: 40px;
+}
+
+.wrapper{
+    width: 1226px;
+    height: 40px;
+    margin: 0 40px;
+}
+
+.nav-left{
+    float: left;
+}
+
+.nav-left li,.nav-right li{
+    float:left;
+    line-height: 40px;
+}
+
+.nav-left li a,.nav-right li a{
+    color: #b0b0b0;
+    font-size: 12px;
+    padding: 0 7px;
+}
+
+.nav-right{
+    float: right;
+}
+
+.nav-left li:hover a{
+    color: #fff;
+}
+.nav-right li:hover a{
+    color: #fff;
+}
+
+.nav-right .cart{
+    background: #424242;
+    color: #b0b0b0;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <style>
+        .div1{
+            width: 600px;
+            height: 600px;
+            background:red;
+        }
+        .div2{
+            width: 400px;
+            height: 400px;
+            background: blue;
+        }
+        .div3{
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="div1">
+            <div class="div2">
+                <div class="div3"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                num:0
+            },
+            methods:{
+                clickHandle
+            }
+        })
+    </script>
+</body>
+</html>

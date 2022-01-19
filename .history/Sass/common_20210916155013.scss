@@ -1,0 +1,5 @@
+@mixin name($w1:200px,$h1:200px,$col:rgb(117, 86, 228)) {
+    width: $w1;
+    height: $h1;
+    border:10px solid $col;
+}

@@ -1,0 +1,51 @@
+@import 'common.scss';
+$color:rgb(135, 178, 243);
+$w:100px;
+$h:height;
+$icon:success;
+
+// sass
+/* sass1 */
+
+
+body {
+    background: $color;
+
+    .div1 {
+        width: $w;
+        height: $w;
+        background: rgb(216, 92, 92);
+
+        border: {
+            top: 10px solid rgb(22, 99, 22);
+            left: 10px solid rgb(22, 99, 22);
+        }
+    }
+
+    p {
+        width: 200px;
+        #{$h}: 200px;
+        background: url(#{$icon}.jpg);
+    }
+
+    a {
+        color: gold;
+
+        &:hover {
+            color: green;
+        }
+    }
+    .aa{
+        @include name(100px,200px,hotpink)
+    }
+    .bb{
+        @include name(200px,100px)
+    }
+    .div2{
+        @extend .aa;
+        background: rgb(140, 211, 140);
+    }
+}
+#arrow{
+    @include myborder();
+}

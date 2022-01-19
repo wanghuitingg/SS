@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    #btn-box {
+        overflow: hidden;
+    }
+
+    #btn-box li {
+        float: left;
+        width: 50px;
+        height: 30px;
+        background: #ccc;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #000;
+        margin-right: 3px;
+    }
+
+    #btn-box .active {
+        background: #f00;
+        color: #fff;
+    }
+
+    #content-box {
+        width: 350px;
+        height: 100px;
+        border: 1px solid #000;
+    }
+
+    #content-box div {
+        display: none;
+    }
+
+    #content-box .c-active {
+        display: block;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <ul id="btn-box">
+            <li class="active">实事</li>
+            <li>新闻</li>
+            <li>娱乐</li>
+        </ul>
+        <div id="content-box">
+            <div class="c-active">实事内容。</div>
+            <div>新闻内容。</div>
+            <div>娱乐内容。</div>
+        </div>
+    </div>
+</body>
+<script>
+    var aLi = document.getElementsByTagName("li");
+    var content =document.getElementById("content-box");
+    var aDiv=document.getElementsByTagName("div");
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index=i; //a[0].index = 0 aLi[1].index = 1 aLi[2].index = 2
+        aLi[i].onclick = function () {
+             // console.log(111)
+                // XXX  console.log( aLi[i],i ); //i = 3 undefined
+                // console.log(this,this.index)//对当前对象的引用
+            // 先将所有li的active移除 ，再给自己添加active
+            for (var j = 0; j < aLi.length; j++) {
+                aLi[i].className = "";// 1.将所有li的active移除
+                aDiv[i].className="";//  将所有div隐藏
+            }
+            // 2.再给自己添加active
+            this.className = "active";
+            // aDiv中索引跟this.index对应的元素 ->显示
+            aDiv[this.index].className = "c-active";
+        }
+    }
+</script>
+
+</html>

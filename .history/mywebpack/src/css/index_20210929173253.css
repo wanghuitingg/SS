@@ -1,0 +1,8 @@
+h1{
+    color: red;
+}
+.box{
+    background-image: url("../images/1.png");
+     width: 200px;
+     height: 200px;
+}

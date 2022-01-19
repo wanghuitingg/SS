@@ -1,0 +1,19 @@
+@mixin name($w1:200px, $h1:200px, $col:rgb(117, 86, 228)) {
+    width: $w1;
+    height: $h1;
+    border: 10px solid $col;
+}
+
+@mixin myborder($col:rgb(176, 230, 176), $dir) {
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+
+    @if ($dir==top) {
+        border-bottom-color: $col;
+    }
+
+    @else if($dir==bottom) {
+        border-top-color: $col;
+    }
+}

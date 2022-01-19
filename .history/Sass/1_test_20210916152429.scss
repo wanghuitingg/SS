@@ -1,0 +1,44 @@
+$color:rgb(135, 178, 243);
+$w:100px;
+$h:height;
+$icon:success;
+
+// sass
+/* sass1 */
+
+@mixin name {
+    width: 300px;
+    height: 300px;
+    border: hotpink;
+}
+body {
+    background: $color;
+
+    div {
+        width: $w;
+        height: $w;
+        background: rgb(216, 92, 92);
+
+        border: {
+            top: 10px solid rgb(22, 99, 22);
+            left: 10px solid rgb(22, 99, 22);
+        }
+    }
+
+    p {
+        width: 200px;
+        #{$h}: 200px;
+        background: url(#{$icon}.jpg);
+    }
+
+    a {
+        color: gold;
+
+        &:hover {
+            color: green;
+        }
+    }
+    h2{
+        @include name()
+    }
+}

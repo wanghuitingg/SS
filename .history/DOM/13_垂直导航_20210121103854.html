@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    h2{
+        background: #000;
+        color: #fff;
+    }
+    #container{
+        width: 300px;
+    }
+</style>
+<body>
+    <div id="container">
+        <div>
+            <h2>电影《断桥》</h2>
+            <ul>
+                <li>导演：李玉</li>
+                <li>监制：方励</li>
+                <li>海报设计：黄海</li>
+            </ul>
+        </div>
+        <div>
+            <h2>演员表</h2>
+            <ul>
+                <li>王俊凯</li>
+                <li>马思纯</li>
+                <li>范伟</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var nameBox = document.getElementById("name-box");
+        var perTitle = document.getElementById("performer-title");
+        var perName = document.getElementById("performer-name");
+
+        perTitle.onclick=function(){
+            perName.style.display="block";
+        }
+    </script>
+</body>
+</html>

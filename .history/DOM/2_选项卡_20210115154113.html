@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    #btn-box{
+        overflow: hidden;
+    }
+    #btn-box li{
+        float: left;
+        width: 50px;
+        height: 30px;
+        background: #ccc;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #000;
+        margin-right: 3px;
+    }
+    #btn-box .active{
+        background: #f00;
+        color: #fff;
+    }
+</style>
+<body>
+    <div id="container">
+        <ul id="btn-box">
+            <li class="active">实事</li>
+            <li>新闻</li>
+            <li>娱乐</li>
+        </ul>
+        <ul id="content-box">
+            <li class="c-active">实事内容。</li>
+            <li>新闻内容。</li>
+            <li>娱乐内容。</li>
+        </ul>
+    </div>
+</body>
+</html>

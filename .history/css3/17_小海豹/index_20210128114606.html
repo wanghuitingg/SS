@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            width: 960px;
+            height: 100px;
+            margin: 50px auto;
+            background: #cccccc;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .img-box {
+            width: 960px;
+            margin: 50px auto 0;
+            display: none;
+        }
+
+        .img-box img {
+            width: 100%;
+            /*display: block;*/
+        }
+        .img-box .big{
+            display: block;
+        }
+
+        .content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .left{
+            width: 630px;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .right{
+            width: 300px;
+            height: 300px;
+            background: blue;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <h2>页头</h2>
+        <h2>标题</h2>
+    </div>
+    <div class="content">
+        <div class="img-box">
+            <img class="small" src="img/01.jpg" alt="">
+            <img class="middle" src="img/01_s.jpg" alt="">
+            <img class="big" src="img/01_s_2x.jpg" alt="">
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div id="end">
+        <h2>页尾</h2>
+    </div>
+</body>
+
+</html>

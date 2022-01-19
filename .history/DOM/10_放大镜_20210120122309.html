@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+    }
+
+    #small-box {
+        position: relative;
+    }
+
+    #small-box img {
+        width: 400px;
+        height: 400px;
+    }
+
+    #drag {
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+</style>
+
+<body>
+    <div id="container">
+        <div id="small-box">
+            <img src="images2/1.jpg" alt="">
+            <span id="drag"></span>
+        </div>
+        <div id="big-box">
+            <img id="img" src="images2/2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var smallBox = document.getElementById("small-box");
+        var bigBox = document.getElementById("big-box");
+        var drag = document.getElementById("drag");
+        var img = document.getElementById("img");
+        smallBox.onmouseover = function () {
+            drag.style.display = "inline";
+            img.style.display = "inline";
+        }
+        smallBox.onmousemove = function (e) {
+            var iLeft = e.clientX - drag.offsetWidth / 2;
+            var iTop = e.clientY - drag.offsetWidth / 2;
+            var xMax = smallBox.offsetWidth - drag.offsetWidth;
+            var yMax = smallBox.offsetHeight - drag.offsetHeight;
+
+            // 判断临界点
+            if (iLeft < 0) {
+                iLeft = 0;
+            }
+            if (iTop < 0) {
+                iTop = 0;
+            }
+            if (iLeft > xMax) {
+                iLeft = xMax;
+            }
+            if (iTop > yMax) {
+                iTop = yMax;
+            }
+
+            // 给drag元素定位
+            drag.style.left = iLeft + "px";
+            drag.style.top = iTop + "px";
+        }
+        smallBox.onmouseout = function () {
+            drag.style.display = "none";
+            img.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
