@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let timer = new Date();
+        timer.setDate(timer.getDate()+1);
+        document.cookie = "test2=123;expires="+timer.toUTCString();
+        console.log(document.cookie);
+
+        function setCookie(key,val,expires) {
+            let timer = new Date();
+            timer.setDate(timer.getDate()+expires);
+            timer = timer.toUTCString();
+            document.cookie = `${key}=${val};expires=${timer}`;
+        }
+        // setCookie("test3","测试",2);
+
+        function getCookie(key) {
+            let _cookie = document.cookie;
+            let cookieArr = _cookie.split(";");
+            cookieArr.map((item)=>{
+                let itemArr = item.split("=");
+                if(itemArr[0]==key){
+                    console.log(itemArr[1]);
+                }
+            })
+            
+        }
+        getCookie("test2")
+
+    </script>
+</body>
+</html>
